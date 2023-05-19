@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="container">
+        <div class="container">
+            <div class="step">
+                <div class="step1">
+                    <div>
+                        <h5 class="info" style="background-color: hsl(206, 94%, 87%); color: black;">1</h5>
+                    </div>
+                    <div>
+                        <h5 id="stp1"><span style="color: hsla(229, 24%, 87%, 0.63);">STEP 1</span> <br>
+                            <a href="personnal_info.html" style="text-decoration: none; color: white;">YOUR INFO</a>
+                        </h5>
+                    </div>
+                </div>
+
+                <div class="step2">
+                    <div>
+                        <h5 class="plan">2</h5>
+                    </div>
+                    <div>
+                        <h5 id="stp2"><span style="color: hsla(229, 24%, 87%, 0.63);">STEP 2</span> <br> <a href="plan.html"
+                                style="text-decoration: none; color: white;">SELECT PLAN</a></h5>
+                    </div>
+                </div>
+                <div class="step3">
+                    <div>
+                        <h5 class="adds">3</h5>
+                    </div>
+                    <div>
+                        <h5 id="stp3"><span style="color: hsla(229, 24%, 87%, 0.63);">STEP 3</span> <br> <a href="adds.html"
+                            style="text-decoration: none; color: white;">ADD-ONS</a></h5>
+                    </div>
+                </div>
+                <div class="step4">
+                    <div>
+                        <h5 class="sum">4</h5>
+                    </div>
+                    <div>
+                        <h5 id="stp4"><span style="color: hsla(229, 24%, 87%, 0.63);">STEP 4</span> <br> <a href="summary.html"
+                            style="text-decoration: none; color: white;">SUMMARY</a></h5>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="form">
+                <div class="first-step">
+                    <h1 class="h1">Personnal info</h1>
+                    <p class="p1">Please provide your name, email address, and phone number.</p>
+                </div>
+    
+                <div>
+                    <form>
+                        <div id="div1">
+                            <label for="name">Name</label><br>
+                            <input type="text" value="My Name" id="name">
+                        </div>
+                        <div id="div2">
+                            <label for="mail">Email Address</label><br>
+                            <input type="email" value="example@gmail.com" id="mail">
+                        </div>
+                        <div id="div3">
+                            <label for="num">Phone Number <span id="error-message"
+                                    style="color: red; margin-left: 230px;"></span></label><br>
+                            <input type="tel" id="num" placeholder="+221 XX XXX XX XX" required>
+                        </div>
+
+                        
+                    </form>
+
+                </div>
+                <div class="first-button">
+                    <a href="plan.html" id="div4"><button type="submit" id="submit-button">Next Step</button></a>
+                </div>
+
+                
+            </div>
+    
+        </div>
+    </div>
+
+    
+    
+    
+
+
+<script>
+    const num = document.getElementById("num")
+    const errorMessage = document.getElementById("error-message")
+    const submitButton = document.getElementById('submit-button')
+
+    num.addEventListener("input", function (){
+        if (num.value === "") {
+            errorMessage.textContent = "This field is required";
+            num.style.borderColor = "red";
+        } else {
+            errorMessage.textContent = "";
+        }
+    });
+
+    
+
+</script>
+</body>
+
+</html>

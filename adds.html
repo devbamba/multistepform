@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="container">
+        <div class="container">
+            <div class="step">
+                <div class="step1">
+                    <div>
+                        <h5 class="info">1</h5>
+                    </div>
+                    <div>
+                        <h5 id="stp1"><span style="color: hsla(229, 24%, 87%, 0.63);">STEP 1</span> <br>
+                            <a href="personnal_info.html" style="text-decoration: none; color: white;">YOUR INFO</a>
+                        </h5>
+                    </div>
+                </div>
+
+                <div class="step2">
+                    <div>
+                        <h5 class="plan">2</h5>
+                    </div>
+                    <div>
+                        <h5 id="stp2"><span style="color: hsla(229, 24%, 87%, 0.63);">STEP 2</span> <br> <a href="plan.html"
+                                style="text-decoration: none; color: white;">SELECT PLAN</a></h5>
+                    </div>
+                </div>
+                <div class="step3">
+                    <div>
+                        <h5 class="adds" style="background-color: hsl(206, 94%, 87%); color: black;">3</h5>
+                    </div>
+                    <div>
+                        <h5 id="stp3"><span style="color: hsla(229, 24%, 87%, 0.63);">STEP 3</span> <br> <a href="adds.html"
+                            style="text-decoration: none; color: white;">ADD-ONS</a></h5>
+                    </div>
+                </div>
+                <div class="step4">
+                    <div>
+                        <h5 class="sum">4</h5>
+                    </div>
+                    <div>
+                        <h5 id="stp4"><span style="color: hsla(229, 24%, 87%, 0.63);">STEP 4</span> <br> <a href="summary.html"
+                            style="text-decoration: none; color: white;">SUMMARY</a></h5>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="container3">
+                <div class="adds-sub">
+                    <h1 class="h1">Pick adds-on</h1>
+                    <p class="p1">Add-ons help enhance your gaming experience.</p>
+                </div>
+
+                <div id="cards-adds">
+                    <div class="card-adds">
+                            <input type="checkbox" class="checkbox-adds">
+                            <h5>Online service <br><span style="color: hsla(228, 4%, 54%, 0.63);">Access to multiplayer games</span></h5>
+                            <p>+$1/mo</p>
+                    </div>
+                    <div class="card-adds">
+                            <input type="checkbox" class="checkbox-adds">
+                            <h5>Larger storage <br> <span style="color: hsla(230, 2%, 49%, 0.63);">Extra 1TB of cloud save</span></h5>
+                            <p>+$2/mo</p>
+                    </div>
+                    <div class="card-adds">
+                            <input type="checkbox" class="checkbox-adds">
+                            <h5>Customizable Profile <br> <span style="color: hsla(223, 3%, 46%, 0.63);">Custom theme on your profile</span></h5>
+                            <p>+$2/mo</p>
+                    </div>
+                </div>
+
+                <div id="btn-footer" class="btn-adds">
+                    <div id="btn-plan1" class="btn-adds1">
+                        <a href="plan.html"><button type="submit">Go Back</button></a>
+                    </div>
+                    <div id="btn-plan2" class="btn-adds2">
+                        <a href="summary.html"><button type="submit">Next Step</button></a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+        
+        
+
+    <script>
+        let checkboxAdds = document.getElementsByClassName('checkbox-adds')
+        let cardAdds = document.getElementsByClassName('card-adds')
+
+        for(let i=0; i< checkboxAdds.length; i++){
+            checkboxAdds[i].addEventListener("click", function(){
+            if(this.checked){
+                cardAdds[i].style.borderColor = "blue"
+                cardAdds[i].style.backgroundColor = "hsla(229, 24%, 87%, 0.63)"
+            }
+            else{
+                cardAdds[i].style.borderColor = ""
+                cardAdds[i].style.backgroundColor = ""
+            }
+        })
+        }
+    </script>
+</body>
+</html>
